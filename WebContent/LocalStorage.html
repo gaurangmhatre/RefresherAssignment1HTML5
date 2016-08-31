@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Printing the cars in LocaStorage:</h1>
+    <div id="car1"></div>
+    <div id="car2"></div>
+    <div id="car3"></div>
+    <div id="car4"></div>
+    
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    //Store
+    localStorage.setItem("car1", "Tesla");
+    localStorage.setItem("car2", "Dodge");
+    localStorage.setItem("car3", "Ferarri");
+    localStorage.setItem("car4", "Audi");
+    
+    //Retrieve  
+    document.getElementById("car1").innerHTML = localStorage.getItem("car1");
+    document.getElementById("car2").innerHTML = localStorage.getItem("car2");
+    document.getElementById("car3").innerHTML = localStorage.getItem("car3");
+    document.getElementById("car4").innerHTML = localStorage.getItem("car4");
+    
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+</body>
+</html>
